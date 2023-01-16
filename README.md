@@ -160,7 +160,7 @@ remoteUrl=https://selenoid.autotests.cloud
 > Информация по настройке и использованию бота <code>https://github.com/qa-guru/allure-notifications</code>
 
 <p align="center">
-<img title="Telegram_notifications" src="readme_design/screens/Telegram_notifications.png">
+<img title="Telegram_notifications" src="readme_design/screens/Tele.png">
 </p>
 
 ## <img width="4%" title="Selenoid" src="readme_design/Selenoid.svg"> Пример запуска теста в Selenoid
