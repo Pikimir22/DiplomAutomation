@@ -51,3 +51,10 @@ tasks.withType(Test) {
     }
 }
 
+task prod(type: Test) {
+    useJUnitPlatform {
+        includeTags("prod")
+    }
+}
+
+
