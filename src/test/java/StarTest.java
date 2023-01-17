@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import settings.TestBase;
@@ -12,11 +13,12 @@ public class StarTest extends TestBase {
         open("/en");
         findElements.searchElements();
     }
-//    @Test
-//    @DisplayName("UI.Поиск.Расположения элемента.Negative")
-//    void findElementNegative() {
-//        open("/");
-//        searchNegative.searchElementsNegative();
-//    }
+    @Test
+    @Disabled
+    @DisplayName("UI.Поиск.Расположения элемента.Negative")
+    void findElementNegative() {
+        open("/");
+        searchNegative.searchElementsNegative();
+    }
 
 }
