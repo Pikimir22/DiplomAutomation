@@ -138,19 +138,19 @@ remoteUrl=https://selenoid.autotests.cloud
 ## <img width="4%" title="Allure_Report" src="readme_design/Allure_Report.svg"> Главная страница allure отчета
 
 <p align="center">
-<img title="Allure_main" src="readme_design/allureScreen/Allure.png">
+<img title="Allure_main" src="readme_design/allureScreen/Allure главная.png">
 </p>
 
 ### <img width="4%" title="Allure_Report" src="readme_design/Allure_Report.svg"> Группировка тестов по проверяемому функционалу
 
 <p align="center">
-<img title="Allure_suits" src="readme_design/allureScreen/Allure1.png">
+<img title="Allure_suits" src="readme_design/allureScreen/Allure Suite.png">
 </p>
 
 ### <img width="4%" title="Allure_Report" src="readme_design/Allure_Report.svg"> Основной дашборд
 
 <p align="center">
-<img title="Allure_dashboard" src="readme_design/allureScreen/Allure2.png">
+<img title="Allure_dashboard" src="readme_design/allureScreen/Allure Dash.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="readme_design/Telegram.svg"> Уведомления в Telegram с использованием бота
@@ -160,7 +160,7 @@ remoteUrl=https://selenoid.autotests.cloud
 > Информация по настройке и использованию бота <code>https://github.com/qa-guru/allure-notifications</code>
 
 <p align="center">
-<img title="Telegram_notifications" src="readme_design/screens/Tele.png">
+<img title="Telegram_notifications" src="readme_design/screens/Telegram.png">
 </p>
 
 ## <img width="4%" title="Selenoid" src="readme_design/Selenoid.svg"> Пример запуска теста в Selenoid
