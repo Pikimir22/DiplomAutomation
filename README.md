@@ -21,10 +21,10 @@
 > Разработаны автотесты на <code>UI</code>.
 ### UI
 
-- [x] Авторизация в веб приложении
-- [x] Проверка сортировки товаров
-- [x] Добавление товаров в корзину
-- [x] Оформление и оплата заказа
+- [x] Поиск статьи негативный/позитивный тест
+- [x] Переход по категориям
+- [x] Фильтрация статей по дате
+- [x] Переход по кнопке
 
 ## Технологический стек
 
@@ -62,7 +62,7 @@
 #### Локальный запуск тестов с использованием параметров из property файла
 
 ```
-gradle clean test -Denv={имя property файла в test.resources}
+gradle clean ui_tests -Denv={имя property файла в test.resources}
 ```
 
 #### Локальный запуск тестов с использованием параметров из property файла test
@@ -73,37 +73,9 @@ gradle clean test
 
 #### Описание параметров для запуска тестов
 
-> -DbrowserName <code>название браузера</code>
->
-> -DbrowserVersion <code>версия браузера</code>
->
-> -DbaseUrl <code>url стенда фронта</code>
->
-> -DbrowserSize <code>разрешение браузера</code>
->
-> -DpageLoadTimeout <code>таймоут загрузки страницы</code>
->
-> -Dtimeout <code>таймаут ожидания загрузки элемента страницы</code>
->
-> -Dheadless <code>запуск браузера в обычном или headless режиме</code>
->
-> -DisRemote <code>запуск тестов локально или через remote сервис</code>
->
-> -DremoteUrl <code>url remote сервиса</code>
-
-### Удаленный запуск тестов
-
-#### Удалённый запуск через передачу параметров
-
-<code>gradle clean test -DisRemote=true -DremoteUrl={url}</code>
-
-#### Удалённый запуск через заранее подготовленный property файл
-
-> Создаём property файл с необходимыми параметрами и кладём его в <code>test.resources</code>
->
-> Запускаем тесты, используя созданный property файл
->
-> <code>gradle clean test -Denv={имя файла}</code>
+<p align="center">
+<img title="Jenkins" src="readme_design/screens/image_2023-02-12_18-10-25.png">
+</p>
 
 ##### Пример файла
 ```

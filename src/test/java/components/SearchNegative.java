@@ -29,9 +29,6 @@ public class SearchNegative extends RandomUtils {
         step("Пользователь вводит 1 буквы или 1 цифры", () -> {
         SelenideElement value = $(".styles_input__Ck8OS").setValue(searchArticle);
         });
-
-
-
 return this;
     }
 }

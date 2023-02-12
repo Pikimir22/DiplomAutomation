@@ -3,44 +3,51 @@ plugins {
     id 'io.qameta.allure' version '2.10.0'
 }
 
-repositories {
-    mavenCentral()
-}
+group 'ru.sberbank'
+version '1.0-SNAPSHOT'
 
 allure {
     report {
-        version.set("2.19.0")
+        version.set("2.20.0")
     }
-    adapter { // отвечает за появление папки build/allure-results
-        aspectjVersion.set("1.9.9.1")
+    adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
-            junit5 { //название фреймворка
-                adapterVersion.set("2.19.0") //версия интеграции фреймворка и Allure
+            junit5 {
+                adapterVersion.set("2.20.0")
             }
         }
     }
 }
 
-compileTestJava {
-    options.encoding('UTF-8')
+repositories {
+    mavenCentral()
 }
 
-compileJava {
-    options.encoding('UTF-8')
+def allureVersion = "2.20.0",
+    selenideVersion = "6.10.3",
+    junitVersion = "5.9.1"
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 dependencies {
     testImplementation(
+            "com.codeborne:selenide:$selenideVersion",
             "com.github.javafaker:javafaker:1.0.2",
-            "com.codeborne:selenide:6.9.0",
-            "io.qameta.allure:allure-selenide:2.19.0",
-            "org.junit.jupiter:junit-jupiter:5.9.1",
-            "org.slf4j:slf4j-simple:1.7.32"
-    )
+            "org.junit.jupiter:junit-jupiter:$junitVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
+            "org.aspectj:aspectjweaver:1.9.9.1",
+            'org.slf4j:slf4j-simple:2.0.5',
+            "com.github.javafaker:javafaker:1.0.2",
+            'org.aeonbits.owner:owner:1.0.4',
+            'org.assertj:assertj-core:3.23.1')
+    testRuntimeOnly(
+            'org.slf4j:slf4j-simple:2.0.5')
 }
-
 tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -50,11 +57,13 @@ tasks.withType(Test) {
         }
     }
 }
-
-task prod(type: Test) {
+task ui_tests(type: Test) {
     useJUnitPlatform {
-        includeTags("prod")
+        includeTags "UITests"
     }
 }
-
-
+task ui(type: Test) {
+    useJUnitPlatform {
+        includeTags "Ui"
+    }
+}
